@@ -7,6 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: '/router',
     name: 'Home',
     component: Home
   },
@@ -14,6 +15,11 @@ const routes = [
     path: '/normal',
     name: 'normal',
     component: ()=>import('../views/normal.vue')
+  },
+  {
+    path: '/router',
+    name: '路由',
+    component: () => import('../views/router.vue')
   }
 ]
 

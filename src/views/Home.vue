@@ -52,7 +52,6 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-@import '../styles/global.scss';
 $main-bg:#f5f5f5;
 $white:#fff;
 $var-width:100%;
@@ -90,7 +89,7 @@ $var-height:100px;
         border: 2px solid red;
     }
     button{
-        border: 1px solid $btn-primary-border;
+        border: 1px solid red;
     }
     .btn{
         width: 125px;        
