@@ -208,9 +208,6 @@ $imgDirPath: '../assets/images/';
   6. 值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、 Helvetica, Arial, sans-serif
   
 
-
-
-
 ### 8. 函数
 >语法
 ```CSS

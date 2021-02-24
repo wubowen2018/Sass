@@ -772,6 +772,52 @@ div:hover span {
 `注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。`
 
 ### 1. 容器属性
+>flex-direction
+
+- `row` 水平方向，从左向右
+- `row-reverse` 水平方向，从右向左
+- `column` 垂直方向，从上向下
+- `column-reverse` 垂直方向，从下向上
+
+```CSS
+.box{
+    display: flex;
+    flex-direction: row;
+}
+```
+
+>flex-wrap
+- `no-wrap` 不换行
+- `wrap` 换行,从上到下
+- `wrap-reverse` 换行，从下到上
+
+```CSS
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+}
+```
+
+>flex-flow
+
+`flex-direction`和`flex-wrap`的合成写法，默认是 `flex-flow: row no-wrap;`
+
+>justify-content
+
+- flex-start 默认值，从左向右
+- flex-end 从右向左
+- center 居中对齐
+- space-between 两端对齐
+- space-arround 每个项目的间距相等
+
+>align-items
+
+- flex-start 从上向下
+- flex-end 从下向上
+- center 垂直居中对齐
+- baseline 项目的第一行文字的基线对齐
+- stretch 默认值：如果项目未设置高度或者高度为auto，将占满整个容器的高度
 
 
 ### 2. 项目属性
