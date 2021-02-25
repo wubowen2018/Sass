@@ -52,6 +52,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+@import '@/assets/styles/global.scss';
 $main-bg:#f5f5f5;
 $white:#fff;
 $var-width:100%;
