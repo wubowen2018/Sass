@@ -32,9 +32,9 @@ export default {
     background: url(#{$imgDirPath}01.jpg) left top no-repeat;
     background-size: 100%;
 
-  .trangle{
-    @include trangle(top,5px,#f5f5f5); 
-  }
+	.trangle{
+		@include trangle(top,5px,#f5f5f5); 
+	}
 }
 
 </style>

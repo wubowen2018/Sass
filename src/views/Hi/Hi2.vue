@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    {{ this.$route.name }}
+      {{ this.$route.name }}
   </div>
 </template>
 
@@ -13,23 +13,23 @@ export default {
   },
 
   components: {
-  
+    
 },
   computed: {
-  
+    
   },
   mounted() {
-  
+    
   },
   beforeDestory() {
-  
+    
   },
   methods: {
-  
+    
   },
 }
 
 </script>
 <style lang="scss" scoped>
-  
+    
 </style>

@@ -693,7 +693,7 @@ input[type="text"]:read-only{
 div span {
   display: inline-block;
   width: 20px;
-  height: 20px;
+  height: 20px;+
   background: orange;
   border-radius: 100%;
   animation-name:around;
