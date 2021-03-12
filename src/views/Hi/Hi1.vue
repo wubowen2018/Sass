@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-      {{ this.$route.name }}
+      sd
   </div>
 </template>
 

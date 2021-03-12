@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
 		<input class="btn" type="button" value="<" @click="back_fun()" />
-    <div class="titleDiv">{{tiltle}}</div>
+    <div class="titleDiv">{{tiltle1}}</div>
 		<div class="rightDiv"></div>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 		}
   },
   props: {
-		tiltle:{
+		tiltle1:{
 			type: String,
 			default: 'J.E.R'
 		}

@@ -23,7 +23,7 @@ const routes = [
     children:[
       {
         path: '/hi',
-        component: () => import('../views/Hi/Hi.vue'),
+        // component: () => import('../views/Hi/Hi.vue'),
         children: [        //子路由,嵌套路由 （此处偷个懒，免得单独再列一点）
           { path: '/', name: 'Hi', component: () => import('../views/Hi/Hi.vue') },
           { path: 'hi1', name: 'Hi1', component: () => import('../views/Hi/Hi1.vue') },

@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <jer-header :title="title" @back_fun="back_fun()"></jer-header>
-    <transition name="fade">
+    <jer-header :title1="title" @back_fun="back_fun()"></jer-header>
       <router-view/>
-    </transition>
 
     <div class="navigate">
       <router-link to="/" class="dashboad">首页</router-link>
       <router-link to='/router' class="found">发现</router-link>
-      <router-link to='/hi' class="mine">我</router-link>
+      <router-link to='/hi/hi1' class="mine">我</router-link>
     </div>
   </div>
 </template>
@@ -29,7 +27,7 @@ export default {
   },
   computed:{
     title(){
-      alert(this.$route.name)
+      //alert(this.$route.name)
       return this.$route.name
         
     }

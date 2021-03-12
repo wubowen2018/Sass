@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
-    {{ this.$route.name }}
+    <!-- {{ this.$route.name }} -->
+    djhsdkds
   </div>
 </template>
 
