@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <jer-header :title1="title" @back_fun="back_fun()"></jer-header>
-      <router-view/>
+    
+    <router-view/>
 
     <div class="navigate">
       <router-link to="/" class="dashboad">首页</router-link>
       <router-link to='/router' class="found">发现</router-link>
       <router-link to='/hi/hi1' class="mine">我</router-link>
     </div>
+
   </div>
 </template>
 
@@ -21,9 +23,10 @@ export default {
     }  
   },
   methods:{
-    back_fun(){
-      alert(111)
+    back_fun() {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
     }
+
   },
   computed:{
     title(){

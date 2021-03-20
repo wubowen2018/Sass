@@ -38,6 +38,14 @@ $imgDirPath: '../assets/images/';
     border-width: $size;
 }
 
+/*
+*像素转 rem
+*
+*/
+@function p2r($size) {
+    @return ($size / 75) * 1rem;
+}
+
 @mixin center() {
     justify-content: center;
     align-items: center;
