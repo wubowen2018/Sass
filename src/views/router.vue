@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import  {request} from '../util/request';
+import  { request } from '../util/request';
 
 export default {
   data () {
@@ -23,11 +23,12 @@ export default {
   },
   mounted() {
     request({
-      url:"/demo"
-    }).then(res=>{
-     console.log(res.data)
+      url:"/daily"
+    })
+    .then(res=>{
+      console.log(res.data)
+    })
 
-   })
   },
   beforeDestory() {
   
