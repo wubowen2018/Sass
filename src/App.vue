@@ -32,6 +32,7 @@ export default {
     title(){
       //alert(this.$route.name)
       return this.$route.name
+      //return this.$route.name
         
     }
   }

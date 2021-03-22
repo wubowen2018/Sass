@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import  {request} from '../util/request';
+
 export default {
   data () {
     return {
@@ -15,12 +17,17 @@ export default {
 
   components: {
   
-},
+  },
   computed: {
   
   },
   mounted() {
-  
+    request({
+      url:"/demo"
+    }).then(res=>{
+     console.log(res.data)
+
+   })
   },
   beforeDestory() {
   

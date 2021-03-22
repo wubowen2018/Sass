@@ -1,0 +1,37 @@
+import Mock from 'mockjs'
+
+// 设置拦截ajax请求的相应时间
+Mock.setup({
+    timeout: '200-600'
+});
+
+let configArray = [];
+
+// 使用webpack的require.context()遍历所有mock文件
+const files = require.context('.', true, /\.js$/);
+files.keys().forEach((key) => {
+    if (key === './index.js') return;
+    configArray = configArray.concat(files(key).default);
+});
+
+// 注册所有的mock服务
+configArray.forEach((item) => {
+    for (let [path, target] of Object.entries(item)) {
+        let protocol = path.split('|');
+        Mock.mock(new RegExp(protocol[1]), protocol[0], target);
+    }
+})
+
+
+// let data = {
+//     'list|8-30': [
+//         {
+//             name: '@cname()',
+//             address: '@city(true)',
+//             id: 'increment(1)'
+//         }
+//     ]
+// }
+// //这里的地址自己随便起名字，确保和axios地址一致
+// Mock.mock('http://localhost:3000/demo', "get", data)
+
