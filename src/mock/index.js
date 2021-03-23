@@ -23,15 +23,3 @@ configArray.forEach((item) => {
 })
 
 
-// let data = {
-//     'list|8-30': [
-//         {
-//             name: '@cname()',
-//             address: '@city(true)',
-//             id: 'increment(1)'
-//         }
-//     ]
-// }
-// //这里的地址自己随便起名字，确保和axios地址一致
-// Mock.mock('http://localhost:3000/demo', "get", data)
-

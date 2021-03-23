@@ -1,12 +1,18 @@
 <template>
   <div class="wrapper">
-    <!-- {{ this.$route.name }} -->
+
     djhsdkds
+    <h3>{{$store.state.count}}</h3>
+
+    <div>
+      <button @click="$store.commit('add')">+</button>
+      <button @click="$store.commit('reduce')">-</button>
+    </div>
+
   </div>
 </template>
 
 <script>
-import  { request } from '../util/request';
 
 export default {
   data () {
@@ -22,11 +28,15 @@ export default {
   
   },
   mounted() {
-    request({
-      url:"/daily"
+    this.$axios({
+      url: '/daily',
+      method: 'get'
     })
     .then(res=>{
       console.log(res.data)
+      console.log(this.$store.state)
+      // this.$store.jer_exercise.commit('DAILY_EXERCISE',res.data)
+
     })
 
   },
