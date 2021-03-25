@@ -1,19 +1,13 @@
 <template>
   <div class="wrapper">
 
-    djhsdkds
-    <h3>{{$store.state.count}}</h3>
-
-    <div>
-      <button @click="$store.commit('add')">+</button>
-      <button @click="$store.commit('reduce')">-</button>
-    </div>
+    sdgsdgdfgggdgf
 
   </div>
 </template>
 
 <script>
-
+import {/*mapState,*/mapMutations,mapGetters,mapActions } from 'vuex';
 export default {
   data () {
     return {
@@ -25,7 +19,8 @@ export default {
   
   },
   computed: {
-  
+    ...mapGetters(['daily','fu_ji','fu_wo_cheng','xiong_tui'])
+
   },
   mounted() {
     this.$axios({
@@ -34,21 +29,58 @@ export default {
     })
     .then(res=>{
       console.log(res.data)
-      console.log(this.$store.state)
-      // this.$store.jer_exercise.commit('DAILY_EXERCISE',res.data)
+      this.DAILY_EXERCISE(res.data)  
 
     })
 
   },
-  beforeDestory() {
-  
-  },
+  beforeDestory() {},
   methods: {
-  
+    ...mapMutations('jer_exercise',[
+      'DAILY_EXERCISE',
+      'FU_JI_EXERCISE',
+      'FU_WO_CHENG_EXERCISE',
+      'XIONGTUI_EXERCISE'
+    ]),
+    ...mapActions('jer_exercise',[
+      'dailyAction',
+      'fu_jiAction',
+      'fu_wo_chengAction',
+      'xiong_tuiAction'
+    ])
+
   },
+  
 }
 
 </script>
 <style lang="scss" scoped>
-  
+@import '../assets/styles/global.scss';
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .tittle{
+    margin: px2rem(32) auto;
+    font-size: px2rem(60);
+    font-weight: 600;
+  }
+  .middleDiv{
+    flex: 1;
+    display: flex;
+    margin: px2rem(32) px2rem(32);
+    width: 100%;
+    button{
+      flex: auto;
+      height: px2rem(60);
+      color: chocolate;
+      font-size: px2rem(50);
+      &:not(:first-child){
+        margin-left: px2rem(40);
+      }
+    }
+  }
+
+}
 </style>

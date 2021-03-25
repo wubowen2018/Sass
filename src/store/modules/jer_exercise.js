@@ -22,17 +22,17 @@ const mutations = {
 }
 
 const actions = {
-    dailyAction({ commit }) {
-        commit('DAILY_EXERCISE')
+    dailyAction({ commit }, dailyData) {
+        commit('DAILY_EXERCISE', dailyData)
     },
-    fu_jiAction({ commit }) {
-        commit('FU_JI_EXERCISE')
+    fu_jiAction({ commit }, fu_jiData) {
+        commit('FU_JI_EXERCISE', fu_jiData)
     },
-    fu_wo_chengAction({ commit }) {
-        commit('FU_WO_CHENG_EXERCISE')
+    fu_wo_chengAction({ commit }, fu_wo_chengData) {
+        commit('FU_WO_CHENG_EXERCISE', fu_wo_chengData)
     },
-    xiong_tuiAction({ commit }) {
-        commit('XIONGTUI_EXERCISE')
+    xiong_tuiAction({ commit }, xiong_tuiData) {
+        commit('XIONGTUI_EXERCISE', xiong_tuiData)
     },
 }
 

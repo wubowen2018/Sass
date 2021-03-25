@@ -42,8 +42,8 @@ $imgDirPath: '../assets/images/';
 *像素转 rem
 *
 */
-@function p2r($size) {
-    @return ($size / 75) * 1rem;
+@function px2rem($size) {
+    @return ($size / 32) * 1rem;
 }
 
 @mixin center() {
