@@ -59,8 +59,26 @@ export default {
     })
     .then(res=>{
       console.log(res.data)
-
       this.DAILY_EXERCISE(res.data)  
+    })
+
+    // this.$axios({
+    //   url: '/fu_ji',
+    //   method: 'get'
+    // })
+    // .then(res=>{
+    //   console.log(res.data)
+    //   // this.DAILY_EXERCISE(res.data)  
+
+    // })
+
+    this.$axios({
+      url: '/fu_wo_cheng',
+      method: 'get'
+    })
+    .then(res=>{
+      console.log(res.data)
+      // this.DAILY_EXERCISE(res.data)  
 
     })
 

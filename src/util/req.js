@@ -29,9 +29,9 @@ instance.interceptors.response.use(
         const res = respone.data
         if (res.code !== "000000") {
             console.log('err:' + res);
-            // return
+            return
         }
-        console.log(res);
+        console.log(res.url+"-------->",res);
         return res
     }, error => {
         console.log(error);
