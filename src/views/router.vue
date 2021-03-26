@@ -1,7 +1,37 @@
 <template>
   <div class="wrapper">
+    <div class="content">
+      <div class="item"
+        v-for="(item) in daily"
+        :key="item.id"
+      >
+        <label class="subKey">日期:</label>
+        <label class="subValue">{{ item.date }}</label>
 
-    sdgsdgdfgggdgf
+        <div class="itemLine">
+          <label class="subKey1">公里数:</label>
+          <label class="subValue1">{{ item.run.miles }}</label>
+        </div>
+        <div class="itemLine">
+          <label class="subKey1">平均耗时:</label>
+          <label class="subValue1">{{ item.run.timeAverage }}</label>
+        </div>
+        <div class="itemLine">
+          <label class="subKey1">深蹲:</label>
+        <label class="subValue1">{{ item.shen_dun }}</label>
+        </div>
+        <div class="itemLine">
+          <label class="subKey1">波比跳:</label>
+        <label class="subValue1">{{ item.bobi_jump }}</label>
+        </div>
+        <div class="itemLine">
+          <label class="subKey1">心情:</label>
+        <label class="subValue1">{{ item.emotion }}</label>
+        </div>
+        
+      </div>
+    </div>
+    
 
   </div>
 </template>
@@ -29,6 +59,7 @@ export default {
     })
     .then(res=>{
       console.log(res.data)
+
       this.DAILY_EXERCISE(res.data)  
 
     })
@@ -61,26 +92,69 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .tittle{
-    margin: px2rem(32) auto;
-    font-size: px2rem(60);
-    font-weight: 600;
-  }
-  .middleDiv{
-    flex: 1;
+  .content{
+    flex:1;
     display: flex;
-    margin: px2rem(32) px2rem(32);
+    flex-flow: column nowrap;
     width: 100%;
-    button{
-      flex: auto;
-      height: px2rem(60);
-      color: chocolate;
-      font-size: px2rem(50);
+
+    .item{
+      border: px2rem(1) solid #ccc;
+      border-radius: px2rem(15);
+      height: px2rem(370);
       &:not(:first-child){
-        margin-left: px2rem(40);
+        margin-top: px2rem(25);
       }
+      position: relative;
+
+      .subKey,.subValue{
+        position: absolute;
+        top: px2rem(20);
+        font-size: px2rem(37.5);
+        font-weight: 500;
+      }
+      .subKey{
+        color: #262626;
+        left: px2rem(20);
+        
+      }
+      .subValue{
+        color: cornflowerblue;
+        left: px2rem(120);
+        font-size: px2rem(37.5);
+      }
+      div:first-of-type{
+        margin-top: px2rem(90);
+    }
+      .itemLine{
+        position: relative;
+        height: px2rem(50);
+        
+        .subKey1,.subValue1{
+        position: absolute;
+        font-weight: 500;
+        }
+        .subKey1{
+          color: #999;
+          left: px2rem(30);
+        }
+        .subValue1{
+          color: #aaa;
+          right: px2rem(30);
+          text-align: right;
+          width: px2rem(700);
+        }
+      }
+
+      
+
+
+
+
     }
   }
+    
+  
 
 }
 </style>

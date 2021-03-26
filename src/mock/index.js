@@ -10,7 +10,7 @@ let configArray = [];
 // 使用webpack的require.context()遍历所有mock文件
 const files = require.context('.', true, /\.js$/);
 files.keys().forEach((key) => {
-    if (key === './index.js') return;
+    if (key === './index.js' || key === './common.js') return;
     configArray = configArray.concat(files(key).default);
 });
 
