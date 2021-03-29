@@ -5,7 +5,7 @@ let { SUCCESS, generateDate } = require('./common')
 let dailyList = {
     ...SUCCESS,
     url: 'daily',
-    "data|3": [
+    "data|5": [
     {   
         date: generateDate,
         "id|+1":0,

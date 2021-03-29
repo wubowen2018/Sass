@@ -11,6 +11,7 @@ let instance = axios.create({
 instance.interceptors.request.use(
     config => {
         console.log("url ---  " + config.url);
+        console.log("headers ---  " + config.headers);
         console.log("params ---  " + config.params);
         console.log("method ---  " + config.method);
         if (config.url === '/login' || config.url === '/register') {

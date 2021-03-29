@@ -1,8 +1,15 @@
 <template>
   <div id="app">
-    <jer-header :title1="title" @back_fun="back_fun()"></jer-header>
-    
-    <router-view/>
+    <jer-header 
+      :title1="title" 
+      @back_fun="back_fun()"
+      class="topHeader"
+    />
+
+    <div class="main">
+      <router-view/>
+      <div class="space"></div>
+    </div>
 
     <div class="navigate">
       <router-link to="/" class="dashboad">首页</router-link>
@@ -15,6 +22,7 @@
 
 <script>
 import JerHeader from './components/common/JerHeader.vue'
+
 export default {
   components: { JerHeader },
   data(){
@@ -30,9 +38,7 @@ export default {
   },
   computed:{
     title(){
-      //alert(this.$route.name)
       return this.$route.name
-      //return this.$route.name
         
     }
   }
@@ -40,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './assets/styles/global.scss';
+@import '@/assets/styles/global.scss';
 
 *{
   margin: 0;
@@ -49,37 +55,61 @@ export default {
   text-decoration: none;
 }
 #app{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-}
-.navigate{
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 44px;
-  box-shadow: 0 -1px 2px #eeeeee;
+  position: relative;
 
-  .dashboad{
-    flex: auto;
-    display: flex;
-    @include center();
 
+  .topHeader{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #f5f5f5;
+    z-index: 100;
   }
-  .found{
-    flex: auto;
-    display: flex;
-    @include center();
-
+  .main{
+    margin-top: px2rem(114);
+    margin-bottom: px2rem(114);
+    flex: 0 0 auto;
+    .space{
+      width: 100%;
+      height: px2rem(113);
+    }
   }
-  .mine{
-    flex: auto;
-    display: flex;
-    @include center();
 
-  }
-  .router-link-active{
-    color: chocolate;
+  .navigate{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 44px;
+    background: #f5f5f5;
+    box-shadow: 0 -1px 2px #eeeeee;
+
+    .dashboad{
+      flex: auto;
+      display: flex;
+      @include center();
+      
+    }
+
+    .found{
+      flex: auto;
+      display: flex;
+      @include center();
+
+    }
+    .mine{
+      flex: auto;
+      display: flex;
+      @include center();
+
+    }
+    .router-link-active{
+      color: chocolate;
+    }
   }
 
 }

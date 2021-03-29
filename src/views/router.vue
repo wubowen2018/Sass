@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="content">
+    <div class="content" v-if="daily">
       <div class="item"
         v-for="(item) in daily"
         :key="item.id"
@@ -31,7 +31,6 @@
         
       </div>
     </div>
-    
 
   </div>
 </template>
@@ -72,15 +71,15 @@ export default {
 
     // })
 
-    this.$axios({
-      url: '/fu_wo_cheng',
-      method: 'get'
-    })
-    .then(res=>{
-      console.log(res.data)
-      // this.DAILY_EXERCISE(res.data)  
+    // this.$axios({
+    //   url: '/fu_wo_cheng',
+    //   method: 'get'
+    // })
+    // .then(res=>{
+    //   console.log(res.data)
+    //   // this.DAILY_EXERCISE(res.data)  
 
-    })
+    // })
 
   },
   beforeDestory() {},

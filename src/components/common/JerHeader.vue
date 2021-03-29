@@ -41,16 +41,17 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+@import '@/assets/styles/global.scss';
 	.wrapper{
 		display: flex;
-		height: 44px;
+		height: px2rem(112.5);
 		box-shadow: 0px 1px 2px #eeeeee;
 		.btn{
-			flex: 0 0 44px;
+			flex: 0 0 px2rem(112.5);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			line-height: 44px;
+			line-height: px2rem(112.5);
 			border: none;
 			background: none;
 
@@ -63,7 +64,7 @@ export default {
 
 		}
 		.rightDiv{
-			flex: 0 0 44px;
+			flex: 0 0 px2rem(112.5);
 		}
 
 	}
