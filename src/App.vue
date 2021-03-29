@@ -14,7 +14,7 @@
     <div class="navigate">
       <router-link to="/" class="dashboad">首页</router-link>
       <router-link to='/router' class="found">发现</router-link>
-      <router-link to='/hi/hi1' class="mine">我</router-link>
+      <router-link to='/normal' class="mine">我</router-link>
     </div>
 
   </div>
@@ -92,7 +92,7 @@ export default {
       flex: auto;
       display: flex;
       @include center();
-      
+
     }
 
     .found{
