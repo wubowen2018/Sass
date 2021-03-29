@@ -20,6 +20,12 @@ const routes = [
     path: '/router',
     name: '路由',
     component: () => import('../views/router.vue'),
+  },
+  {
+    path: '/jer_exercise',
+    name: 'JER运动',
+    component: () => import('../views/jer_exercise/index.vue')
+
   }
 ]
 

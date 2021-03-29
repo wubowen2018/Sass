@@ -19,6 +19,31 @@ let dailyList = {
     }]
 }
 
+let jer_exercise_items = {
+    ...SUCCESS,
+    url: 'jer_exercise_items',
+    data: 
+        [
+            {
+                id: 0,
+                "name": "daily",
+                "url": "jer_exercise/daily"
+            },
+            {
+                id: 1,
+                "name": "fu_ji",
+                "url": "jer_exercise/fu_ji"
+            },
+            {
+                id: 2,
+                "name": "fu_wo_cheng",
+                "url": "jer_exercise/fu_wo_cheng"
+            }
+        ]
+        
+}
+
 export default {
-    'get|http://localhost:40036/daily': dailyList
+    'get|http://localhost:40036/daily': dailyList,
+    'get|http://localhost:40036/jer_exercise_items': jer_exercise_items
 }

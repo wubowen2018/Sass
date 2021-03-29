@@ -3,7 +3,8 @@ const state = {
     daily: {},
     fu_ji: {},
     fu_wo_cheng: {},
-    xiong_tui: {}
+    xiong_tui: {},
+    jer_exercise_items: []
 }
 
 const mutations = {
@@ -18,6 +19,9 @@ const mutations = {
     },
     XIONGTUI_EXERCISE: (state, xiong_tuiData) => {
         state.xiong_tui = xiong_tuiData
+    },
+    JER_EXERCISE_ITEMS: (state, jer_exercise_items) =>{
+        state.jer_exercise_items = jer_exercise_items
     }
 }
 
@@ -34,6 +38,9 @@ const actions = {
     xiong_tuiAction({ commit }, xiong_tuiData) {
         commit('XIONGTUI_EXERCISE', xiong_tuiData)
     },
+    jer_exercise_itemsAction({ commit }, jer_exercise_items){
+        commit('JER_EXERCISE_ITEMS', jer_exercise_items)
+    }
 }
 
 export default {
