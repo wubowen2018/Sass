@@ -2,8 +2,8 @@ let { SUCCESS, generateDate, times_3_15 } = require('./common')
 
 let fuWoChengData = {
     ...SUCCESS,
-    url: 'fu_wo_cheng',
-    "data|20": [
+    url: 'jer_exercise/fu_wo_cheng',
+    "data|30": [
         {
             "id|+1": 0,
             date: generateDate,
@@ -16,5 +16,5 @@ let fuWoChengData = {
 
 
 export default {
-    'get|http://localhost:40036/fu_wo_cheng': fuWoChengData
+    'get|http://localhost:40036/jer_exercise/fu_wo_cheng': fuWoChengData
 }

@@ -2,8 +2,8 @@ let { SUCCESS, generateDate, times_4_15, times_4_30,times_3_18, times_5_1} = req
 
 let fuJiData = {
     ...SUCCESS,
-    url: 'fu_ji',
-    "data|10": [
+    url: 'jer_exercise/fu_ji',
+    "data|30": [
         {
             "id|+1": 0,
             date: generateDate,
@@ -16,5 +16,5 @@ let fuJiData = {
 }
 
 export default {
-    'get|http://localhost:40036/fu_ji': fuJiData
+    'get|http://localhost:40036/jer_exercise/fu_ji': fuJiData
 }

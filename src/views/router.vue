@@ -53,22 +53,22 @@ export default {
   },
   mounted() {
     this.$axios({
-      url: '/daily',
+      url: 'jer_exercise/daily',
       method: 'get'
     })
     .then(res=>{
       console.log(res.data)
-      this.DAILY_EXERCISE(res.data)  
+      this.DAILY(res.data)  
     })
 
   },
   beforeDestory() {},
   methods: {
     ...mapMutations('jer_exercise',[
-      'DAILY_EXERCISE',
-      'FU_JI_EXERCISE',
-      'FU_WO_CHENG_EXERCISE',
-      'XIONGTUI_EXERCISE'
+      'DAILY',
+      'FU_JI',
+      'FU_WO_CHENG',
+      'XIONG_TUI'
     ]),
     ...mapActions('jer_exercise',[
       'dailyAction',

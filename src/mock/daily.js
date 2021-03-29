@@ -4,8 +4,8 @@ let { SUCCESS, generateDate } = require('./common')
 
 let dailyList = {
     ...SUCCESS,
-    url: 'daily',
-    "data|5": [
+    url: 'jer_exercise/daily',
+    "data|30": [
     {   
         date: generateDate,
         "id|+1":0,
@@ -27,23 +27,32 @@ let jer_exercise_items = {
             {
                 id: 0,
                 "name": "daily",
+                method:"get",
                 "url": "jer_exercise/daily"
             },
             {
                 id: 1,
                 "name": "fu_ji",
+                method:"get",
                 "url": "jer_exercise/fu_ji"
             },
             {
                 id: 2,
                 "name": "fu_wo_cheng",
+                method:"get",
                 "url": "jer_exercise/fu_wo_cheng"
+            },
+            {
+                id: 3,
+                "name": "xiong_tui",
+                method:"get",
+                "url": "jer_exercise/xiong_tui"
             }
         ]
         
 }
 
 export default {
-    'get|http://localhost:40036/daily': dailyList,
+    'get|http://localhost:40036/jer_exercise/daily': dailyList,
     'get|http://localhost:40036/jer_exercise_items': jer_exercise_items
 }

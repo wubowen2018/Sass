@@ -8,16 +8,16 @@ const state = {
 }
 
 const mutations = {
-    DAILY_EXERCISE: (state, dailyData) => {
+    DAILY: (state, dailyData) => {
         state.daily = dailyData
     },
-    FU_JI_EXERCISE: (state, fu_jiData) => {
+    FU_JI: (state, fu_jiData) => {
         state.fu_ji = fu_jiData
     },
-    FU_WO_CHENG_EXERCISE: (state, fu_wo_chengData) => {
+    FU_WO_CHENG: (state, fu_wo_chengData) => {
         state.fu_wo_cheng = fu_wo_chengData
     },
-    XIONGTUI_EXERCISE: (state, xiong_tuiData) => {
+    XIONG_TUI: (state, xiong_tuiData) => {
         state.xiong_tui = xiong_tuiData
     },
     JER_EXERCISE_ITEMS: (state, jer_exercise_items) =>{
@@ -27,16 +27,16 @@ const mutations = {
 
 const actions = {
     dailyAction({ commit }, dailyData) {
-        commit('DAILY_EXERCISE', dailyData)
+        commit('DAILY', dailyData)
     },
     fu_jiAction({ commit }, fu_jiData) {
-        commit('FU_JI_EXERCISE', fu_jiData)
+        commit('FU_JI', fu_jiData)
     },
     fu_wo_chengAction({ commit }, fu_wo_chengData) {
-        commit('FU_WO_CHENG_EXERCISE', fu_wo_chengData)
+        commit('FU_WO_CHENG', fu_wo_chengData)
     },
     xiong_tuiAction({ commit }, xiong_tuiData) {
-        commit('XIONGTUI_EXERCISE', xiong_tuiData)
+        commit('XIONG_TUI', xiong_tuiData)
     },
     jer_exercise_itemsAction({ commit }, jer_exercise_items){
         commit('JER_EXERCISE_ITEMS', jer_exercise_items)

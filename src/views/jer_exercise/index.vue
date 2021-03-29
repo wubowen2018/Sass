@@ -4,7 +4,7 @@
 		<div class="items" 
 			v-for="item in jer_exercise_items"
 			:key="item.id"
-			@click="goItem(item.url)"
+			@click="goItem(item.id)"
 		>{{ item.name }}</div>
 	</div>
   </div>
@@ -41,11 +41,28 @@ export default {
   beforeDestory() {},
   methods: {
     ...mapMutations('jer_exercise',[
-      'JER_EXERCISE_ITEMS'
+		'JER_EXERCISE_ITEMS',
+		'DAILY',
+		'FU_JI',
+		'FU_WO_CHENG',
+		'XIONG_TUI'
     ]),
-	goItem(path){
-		alert(path)
-		// this.$router.push(path)
+	goItem(index){
+		let item = this.jer_exercise_items[index]
+		let { method, url, name } = item
+
+		let path = 'jer_exercise/' + name
+		let mutation = name.toUpperCase()
+		this.$axios({
+			url: url,
+			method: method
+		})
+		.then(res=>{
+			console.log(res.data)
+			this[mutation](res.data)  
+			console.log(path);
+			this.$router.push(path)
+		})
 	}
   }
 }
