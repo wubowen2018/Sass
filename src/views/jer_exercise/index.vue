@@ -7,6 +7,7 @@
 			@click="goItem(item.id)"
 		>{{ item.name }}</div>
 	</div>
+	<router-view/>
   </div>
 </template>
 
@@ -51,7 +52,7 @@ export default {
 		let item = this.jer_exercise_items[index]
 		let { method, url, name } = item
 
-		let path = 'jer_exercise/' + name
+		let path =  'jer_exercise/' + name
 		let mutation = name.toUpperCase()
 		this.$axios({
 			url: url,

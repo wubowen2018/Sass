@@ -6,10 +6,10 @@ import axios from './util/req';
 import './assets/styles/global.scss';
 
 
-import Moment from 'moment';
+// import Moment from 'moment';
 
-let now = Moment().format()
-console.log(now);
+// let now = Moment().format()
+// console.log(now);
 
 // 引入mock的开关
 import { whetherUseMock } from './config/default.config'

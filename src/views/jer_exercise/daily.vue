@@ -1,11 +1,16 @@
 <template>
-    <div>
-        aszssfdf
+    <div class="wraper">
+        <div id="chart" class="echartDiv"></div>
     </div>
 </template>
 
 <script>
-console.log(12212212);
+const Echarts =  require('echarts/lib/echarts')
+
+require('echarts/lib/chart/bar')
+require('echarts/lib/component/tooltip')
+require('echarts/lib/component/title')
+
 export default {
     data() {
         return {
@@ -19,11 +24,22 @@ export default {
 
     },
     mounted() {
-        console.log(this.$route.name);
+        // console.log(this.$route.name);
+        let chartDom = document.getElementById('chart')
+        let myEchart = Echarts.init(chartDom)
+        console.log(myEchart);
+
     }
 }
 
 </script>
-<style lang="less" scoped>
-    
+<style lang="scss" scoped>
+    .wraper{
+        padding: px2rem(50);
+        .echartDiv{
+            width: px2rem(200);
+            height: px2rem(200);
+
+        }
+    }
 </style>
