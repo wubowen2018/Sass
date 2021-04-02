@@ -51,17 +51,18 @@ export default {
 	goItem(index){
 		let item = this.jer_exercise_items[index]
 		let { method, url, name } = item
+		let path = '/jer_exercise/' + name
 
-		let path =  'jer_exercise/' + name
-		let mutation = name.toUpperCase()
-		this.$axios({
+		path !== this.$route.path && this.$axios({
 			url: url,
 			method: method
 		})
 		.then(res=>{
 			console.log(res.data)
+			let mutation = name.toUpperCase()
 			this[mutation](res.data)  
 			console.log(path);
+			console.log("当前路径",this.$route);
 			this.$router.push(path)
 		})
 	}

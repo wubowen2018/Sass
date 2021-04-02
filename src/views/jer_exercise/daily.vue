@@ -37,8 +37,8 @@ export default {
     .wraper{
         padding: px2rem(50);
         .echartDiv{
-            width: px2rem(200);
-            height: px2rem(200);
+            width: 300px;
+            height: 300px;
 
         }
     }

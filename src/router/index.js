@@ -27,22 +27,22 @@ const routes = [
     component: () => import('../views/jer_exercise/index.vue'),
     children:[
       {
-        path: '/daily',
+        path: '/jer_exercise/daily',
         name: '日常训练',
         component: () => import('../views/jer_exercise/daily.vue')
       },
       {
-        path: '/fu_ji',
+        path: '/jer_exercise/fu_ji',
         name: '腹肌训练',
         component: () => import('../views/jer_exercise/fu_ji.vue')
       },
       {
-        path: '/fu_wo_cheng',
+        path: '/jer_exercise/fu_wo_cheng',
         name: '俯卧撑训练',
         component: () => import('../views/jer_exercise/fu_wo_cheng.vue')
       },
       {
-        path: '/xiong_tui',
+        path: '/jer_exercise/xiong_tui',
         name: '胸推',
         component: () => import('../views/jer_exercise/xiong_tui.vue')
       }
