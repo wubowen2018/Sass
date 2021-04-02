@@ -1,14 +1,17 @@
 <template>
-  <div class="wrapper">
-	<div class="conten">
-		<div class="items" 
-			v-for="item in jer_exercise_items"
-			:key="item.id"
-			@click="goItem(item.id)"
-		>{{ item.name }}</div>
+	<div class="wrapper">
+		<div class="routerView">
+			<router-view/>
+		</div>
+
+		<div class="content">
+			<div class="items" 
+				v-for="item in jer_exercise_items"
+				:key="item.id"
+				@click="goItem(item.id)"
+			>{{ item.name }}</div>
+		</div>
 	</div>
-	<router-view/>
-  </div>
 </template>
 
 <script>
@@ -73,22 +76,34 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
 .wrapper{
-	.conten{
-		padding: px2rem(50);
+	display: flex;
+	flex-flow: column nowrap;
+	position: relative;
+
+	.routerView{
+		flex: 1 0 auto;
+
+	}
+	.content{
+		flex: 0 0 px2rem(120);
+		display: flex;
+		position: absolute;
+		bottom: px2rem(0);
+
+		padding: px2rem(10) px2rem(30);
 		background-repeat: no-repeat;
 		background-origin: padding-box;
 		.items{
+			flex: 1;
 			display: flex;
+			padding: px2rem(20);
 			@include center();
-			width: 100%;
-			height: px2rem(120);
 			background-color: rgb(119, 224, 243);
-			font-size: px2rem(50);
 			font-weight: 500;
 			color: #fff;
 			border-radius: px2rem(30);
 			&:not(:first-child){
-				margin-top: px2rem(37.5);
+				margin-right: px2rem(32.5);
 			}
 		}
 	}

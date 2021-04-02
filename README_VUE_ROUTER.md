@@ -20,13 +20,16 @@ export default new Router({
     }，{
       path:'/hi',
       component:Hi,
-      children:[        //子路由,嵌套路由 （此处偷个懒，免得单独再列一点）
-        {path:'/',component:Hi},
-        {path:'hi1',component:Hi1},
-        {path:'hi2',component:Hi2},
+      children:[ 
+        {path:'/hi/hi1',component:Hi1},
+        {path:'/hi/hi2',component:Hi2},
       ]
     }
   ]
 })
 ```
+
+
+
+
 

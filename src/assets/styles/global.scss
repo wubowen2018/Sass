@@ -43,7 +43,7 @@ $imgDirPath: '../assets/images/';
 *
 */
 @function px2rem($size) {
-    @return ($size / 37.5) * 1rem;
+    @return ($size / 32.5) * 1rem;
 }
 
 @mixin center() {
